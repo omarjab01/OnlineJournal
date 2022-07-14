@@ -1,0 +1,16 @@
+<% include ./components/header %>
+
+<h1>Scrivi</h1>
+<form action="/scrivi" method="POST" class = "d-flex flex-column w-100">
+    <div class="form-group">
+        <label for="titolo">Titolo</label>
+        <input type="text" class="form-control" name="titolo" id="">
+    </div>
+    <div class="form-group">
+        <label for="testo" >Testo</label>
+        <textarea name="testo" class="form-control" id="" cols="30" rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Invia</button>
+</form>
+
+<% include ./components/footer %>

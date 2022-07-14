@@ -1,0 +1,27 @@
+<% include ./components/header %>
+
+<!-- <div class="homepage d-flex flex-row w-100">
+    <h1>Home</h1>
+    <form action="/scrivi"><button class="btn btn-primary">Nuova Pagina</button></form>
+</div> -->
+
+
+
+<% arrayPosts.forEach( (post, index) => { %>
+    <div class="pagina" style="border-bottom: 1px solid rgb(185, 185, 185);">
+        <div class="top">
+            <h1 class="font-weight-bold"><%= post.titolo %></h1>
+            <a href="/elimina/:<%= post.titolo %>" class="elimina-btn">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAABmJLR0QA/wD/AP+gvaeTAAABgElEQVR4nO3cPU5CQRhG4SOFgIkr0CXqVkz8S6hJ3IqWWLkFrcQIsQQLrExMgPvlZcDzJF95JzOHC7lQAJIkSZKktQ2AK+ANWG44rz/XDuK73kM3bB7491zHd71njoAp3UN//Kx1ME6Ae1YH6xqn1ZkCd8CwqNlWRuw+RGpGXUJ1eXv1gDk7fqWDvoBTYLHNxb3avegvXUIvgHHVRvbAmC3v5gpD4JaaJ4VW553VI+d/+YiUJEl7rfKHl2XhWi0paeQ3wxBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0iKFDDB1i6BBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0iKFDKkPPC9dqxWfVQpWhXwrXakXZmSpDPxSu1Yomz9QHntn9Py9WzQQ4Li1U6JzDiD0BzorblOsDl8ATMGP30dadGfAIXNDwnSxJkiRJktSCb3RsfnHyhxyUAAAAAElFTkSuQmCC">
+            </a>
+        </div>
+        
+        <p>
+            <%= post.testo.substring(0,100) + " ..." %>
+            <a href="/posts/:<%= post.titolo %>">Read More</a>
+        </p>
+    </div>
+<% }) %>
+
+
+<% include ./components/footer %>
